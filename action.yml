@@ -1,0 +1,11 @@
+name: 'My Docker Container Action'
+description: 'A simple Docker-based GitHub Action for Lab 4.1'
+author: 'Dustin Roberts'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+inputs:
+  message:
+    description: 'Message to print'
+    required: false
+    default: 'Hello from my Docker action!'
