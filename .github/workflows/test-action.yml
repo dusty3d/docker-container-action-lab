@@ -1,0 +1,18 @@
+name: Test Docker Container Action
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  run-docker-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run my Docker container action
+        uses: ./
+        with:
+          message: 'Hello from Lab 4.1 Docker action!'
